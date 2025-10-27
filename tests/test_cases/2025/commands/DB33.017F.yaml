@@ -1,0 +1,13 @@
+command_id: DB33.017F
+test_cases:
+- expected_values:
+    IDLE_TIME: 0
+    IDLE_TIME_SUP: 0
+    PTO_TIME: 0
+    PTO_TIME_SUP: 0
+    RUN_TIME: 0
+    RUN_TIME_SUP: 0
+  response: |-
+    18DAF1DA100F417F00000000
+    18DAF1DA2100000000000000
+    18DAF1DA220000AAAAAAAAAA
