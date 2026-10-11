@@ -1,4 +1,99 @@
 { "commands": [
-
+{ "hdr": "743", "cmd": {"22": "0207"}, "freq": 30, "dbgfilter": { "to": 2024, "from": 2026 },
+  "signals": [
+    {"id": "MEGANE_E_ODO_KM", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "10"}, "freq": 5,
+  "signals": [
+    {"id": "MEGANE_E_PARKING_BRAKE",       "path": "Control",   "fmt": {            "len": 1,  "max": 1,                             "unit": "offon"             }, "name": "Parking brake"},
+    {"id": "MEGANE_E_BRAKE_NIVOCODE_WARN", "path": "Control",   "fmt": {"bix": 1,   "len": 1,  "max": 1,                             "unit": "offon"             }, "name": "Brake fluid level warning"},
+    {"id": "MEGANE_E_SEATBELT_WARN",       "path": "Seatbelts", "fmt": {"bix": 20,  "len": 1,  "max": 1,                             "unit": "offon"             }, "name": "Seatbelt warning"},
+    {"id": "MEGANE_E_12_V_AFTER_IGN",      "path": "Engine",    "fmt": {"bix": 27,  "len": 1,  "max": 1,                             "unit": "offon"             }, "name": "+ 12 v after ignition"},
+    {"id": "MEGANE_E_DRIVER_S_SEAT_BELT",  "path": "Seatbelts", "fmt": {"bix": 32,  "len": 1,  "max": 1,                             "unit": "offon"             }, "name": "Driver's seat belt switch"},
+    {"id": "MEGANE_E_OIL_P_SWITCH",        "path": "Engine",    "fmt": {"bix": 34,  "len": 1,  "max": 1,                             "unit": "scalar"            }, "name": "Oil pressure switch"},
+    {"id": "MEGANE_E_RPM_743",             "path": "Movement",  "fmt": {"bix": 56,  "len": 16, "max": 65535,                         "unit": "rpm"               }, "name": "Engine speed"},
+    {"id": "MEGANE_E_VSS_743",             "path": "Movement",  "fmt": {"bix": 72,  "len": 16, "max": 65535,                         "unit": "kilometersPerHour" }, "name": "Vehicle speed"},
+    {"id": "MEGANE_E_WATER_T_743",         "path": "Engine",    "fmt": {"bix": 120, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "celsius"           }, "name": "Water temperature"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "11"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_CHANGE_INTERVAL",        "path": "Engine", "fmt": {"bix": 128, "len": 8, "max": 255000, "mul": 1000, "unit": "kilometers" }, "name": "Oil change interval in km"},
+    {"id": "MEGANE_E_OIL_CHANGE_INTERVAL_MONTHS", "path": "Engine", "fmt": {"bix": 136, "len": 8, "max": 255,                 "unit": "scalar"     }, "name": "Oil change interval in months"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "12"}, "freq": 30,
+  "signals": [
+    {"id": "MEGANE_E_FLI",                  "path": "Fuel", "fmt": {"bix": 16,  "len": 16, "max": 655,   "div": 100, "unit": "liters" }, "name": "Fuel level"},
+    {"id": "MEGANE_E_FUEL_GAUGE_RESISTOR",  "path": "Fuel", "fmt": {"bix": 48,  "len": 16, "max": 65535,             "unit": "ohms"   }, "name": "Fuel gauge resistor"},
+    {"id": "MEGANE_E_FUEL_USED_SINCE_ADAC", "path": "Fuel", "fmt": {"bix": 112, "len": 16, "max": 3276,  "div": 20,  "unit": "liters" }, "name": "Fuel used since trip computer reset"},
+    {"id": "MEGANE_E_FUEL_FLOW",            "path": "Fuel", "fmt": {"bix": 128, "len": 8,  "max": 255,               "unit": "liters" }, "name": "Fuel flow"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "18"}, "freq": 30,
+  "signals": [
+    {"id": "MEGANE_E_ODOMETERS", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometers"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "19"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_CHANGE_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Oil change range/current value in km"}
+  ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"21": "1A"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_CHANGE_RANGE_CURRENT", "path": "Trips", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Oil change range/current value in months"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0104"}, "freq": 30,
+  "signals": [
+    {"id": "MEGANE_E_DIST_UNITS", "path": "Trips", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Distance units"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0105"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_CONS_MEASUREMENT", "path": "Engine", "fmt": {"bix": 6, "len": 2, "max": 3, "unit": "scalar" }, "name": "Consumption measurement units"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0106"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_ADAC_DISPLAY_TYPE", "path": "Engine", "fmt": {"bix": 6, "len": 2, "max": 3, "unit": "scalar" }, "name": "Trip computer display type"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0201"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_CHANGE_INTERVAL_KM", "path": "Engine", "fmt": { "len": 16, "max": 40720, "mul": 64, "div": 103, "unit": "miles" }, "name": "Oil change interval in km"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0202"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_CHANGE_FREQUENCY", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Oil change frequency in days"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0203"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_CHANGE_RANGE_CURRENT_KM", "path": "Trips", "fmt": { "len": 16, "max": 40720, "mul": 64, "div": 103, "unit": "miles" }, "name": "Oil change range/current value in km"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "0204"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_SERVICE_INTERVAL", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Oil service interval in days"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "020B"}, "freq": 3600,
+  "signals": [
+    {"id": "MEGANE_E_MAINTENANCE_AUTONOMY", "path": "Engine", "fmt": { "len": 16, "max": 40720, "mul": 64, "div": 103, "unit": "miles" }, "name": "Maintenance autonomy interval in km"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "020C"}, "freq": 3600,
+  "signals": [
+    {"id": "MEGANE_E_MAINTENANCE_AUTONOMY_INTERVAL_DAYS", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Maintenance autonomy interval in days"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "020D"}, "freq": 3600,
+  "signals": [
+    {"id": "MEGANE_E_MAINTENANCE_AUTONOMY_CURRENT_KM", "path": "Engine", "fmt": { "len": 16, "max": 40720, "mul": 64, "div": 103, "unit": "miles" }, "name": "Maintenance autonomy/current value in km"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "020E"}, "freq": 3600,
+  "signals": [
+    {"id": "MEGANE_E_MAINTENANCE_AUTONOMY_CURRENT_DAYS", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Maintenance autonomy/current value days"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "2008"}, "freq": 1,
+  "signals": [
+    {"id": "MEGANE_E_OIL_P_SWITCH_743", "path": "Engine", "fmt": {"bix": 6, "len": 2, "max": 3, "unit": "scalar" }, "name": "Oil pressure switch"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "2201"}, "freq": 30,
+  "signals": [
+    {"id": "MEGANE_E_CURRENT_FLI", "path": "Fuel", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "liters" }, "name": "Current fuel level"}
+  ]},
+{ "hdr": "743", "rax": "763", "dbg": true, "cmd": {"22": "2203"}, "freq": 30,
+  "signals": [
+    {"id": "MEGANE_E_FLI_DISPLAYED", "path": "Fuel", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "liters" }, "name": "Fuel level displayed"}
+  ]}
 ]
 }
